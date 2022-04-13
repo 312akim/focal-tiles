@@ -20,3 +20,10 @@ export const Base = Template.bind({});
 Base.args = {
   ...mockBaseTemplateProps.base,
 } as IBaseTemplate;
+
+export const Alt = Template.bind({});
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+
+Alt.args = {
+  ...mockBaseTemplateProps.alt,
+} as IBaseTemplate;
