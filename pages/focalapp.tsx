@@ -1,6 +1,7 @@
 import React from 'react';
 import AppLayout from '../components/layouts/app/AppLayout';
 import { ReactElement } from 'react';
+import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
 
 function FocalApp() {
     return (
@@ -12,9 +13,11 @@ function FocalApp() {
 
 FocalApp.getLayout = function getLayout(page: ReactElement) {
     return (
-      <AppLayout>
-        {page}
-      </AppLayout>
+      <PrimaryLayout>
+        <AppLayout>
+          {page}
+        </AppLayout>
+      </PrimaryLayout>
     )
   }
 
