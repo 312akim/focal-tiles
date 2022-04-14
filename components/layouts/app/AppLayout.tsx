@@ -8,7 +8,7 @@ export interface IAppLayout {
 const AppLayout: React.FC<IAppLayout> = ({ children }) => {
     return (
         <>
-            <AppHeader sampleTextProp='Header'/>
+            <AppHeader auth={true}/>
             <main>{children}</main>
             <h1>Footer Placeholder</h1>
         </>
