@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import AppHeader from '../../surfaces/appHeader/AppHeader';
 
 export interface IAppLayout {
     children: ReactNode
@@ -7,7 +8,7 @@ export interface IAppLayout {
 const AppLayout: React.FC<IAppLayout> = ({ children }) => {
     return (
         <>
-            <h1>Header Placeholder</h1>
+            <AppHeader sampleTextProp='Header'/>
             <main>{children}</main>
             <h1>Footer Placeholder</h1>
         </>

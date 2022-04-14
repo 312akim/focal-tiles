@@ -5,12 +5,7 @@ export interface IPrimaryLayout {
 }
 
 const PrimaryLayout: React.FC<IPrimaryLayout> = ({ children }) => {
-  return (
-    <>
-      <h1>Primary Layout</h1>
-      <main>{children}</main>
-    </>
-  );
+  return (<div>{children}</div>);
 };
 
 export default PrimaryLayout;
