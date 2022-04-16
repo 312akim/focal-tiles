@@ -26,5 +26,5 @@
       }
     }
   ],
-  "resolveSourceMapLications": ["${workspaceFolder}/**", "!**/node_modules/**"]
+  "resolveSourceMapLocations": ["${workspaceFolder}/**", "!**/node_modules/**"]
 }

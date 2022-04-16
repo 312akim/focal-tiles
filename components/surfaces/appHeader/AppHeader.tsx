@@ -2,6 +2,7 @@ import styles from './AppHeader.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import SearchBar from '../../inputs/searchBar/SearchBar';
+import { mockSearchBarProps } from '../../inputs/searchBar/SearchBar.mocks';
 
 export interface IAppHeader {
   auth: boolean;
@@ -10,7 +11,7 @@ export interface IAppHeader {
 const AppHeader: React.FC<IAppHeader> = ({ auth }) => {
   return (
     <div className={`h-20 bg-gray grid grid-cols-3 text-slate text-center`}>
-      <SearchBar />
+      <SearchBar searchData={[...mockSearchBarProps.base.searchData]} />
 
       <div className='flex mx-auto'>
         <div className='my-auto'>Space Picker</div>
