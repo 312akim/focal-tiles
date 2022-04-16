@@ -1,6 +1,4 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import PrimaryLayout from '../components/layouts/primary/PrimaryLayout'
 import styles from '../styles/Home.module.css'
 import { NextPageWithLayout } from './page'
