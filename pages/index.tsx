@@ -1,7 +1,9 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import PrimaryLayout from '../components/layouts/primary/PrimaryLayout'
 import styles from '../styles/Home.module.css'
 import { NextPageWithLayout } from './page'
+import Button from '../components/inputs/button/Button'
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -16,6 +18,11 @@ const Home: NextPageWithLayout = () => {
         <h1 className={styles.title}>
           Welcome to <a href="http://focaltiles.com/">FocalTiles!</a>
         </h1>
+        <Link href={'/focalapp'}>
+          <a>
+            <Button text={'Go to App'}/>
+          </a>
+        </Link>
       </main>
     </div>
   )

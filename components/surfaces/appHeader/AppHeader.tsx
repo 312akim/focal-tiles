@@ -1,4 +1,4 @@
-import styles from './AppHeader.module.css';
+//import styles from './AppHeader.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import SearchBar from '../../inputs/searchBar/SearchBar';
