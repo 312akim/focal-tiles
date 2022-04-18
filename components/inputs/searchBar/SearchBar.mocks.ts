@@ -4,15 +4,15 @@ import { ISearchBar } from './SearchBar';
 const base: ISearchBar = {
   searchData: [
     {
-      displayName: 'Test1',
+      displayName: 'SearchBar Test 1',
       onClick: () => { console.log('clicked1')}
     },
     {
-      displayName: 'Test2',
+      displayName: 'SearchBar Test 2',
       onClick: () => { console.log('clicked2')}
     },
     {
-      displayName: 'Test3',
+      displayName: 'SearchBar Test 3',
       onClick: () => { console.log('clicked3')}
     },
   ]
@@ -21,15 +21,19 @@ const base: ISearchBar = {
 const alt: ISearchBar = {
   searchData: [
     {
-      displayName: 'Test4',
+      displayName: 'SearchBar Test 4',
       onClick: () => { console.log('clicked4')}
     },
     {
-      displayName: 'Test5',
+      displayName: 'SearchBar Test 5',
       onClick: () => { console.log('clicked5')}
     },
     {
-      displayName: 'Test6',
+      displayName: 'SearchBar Test 6',
+      onClick: () => { console.log('clicked6')}
+    },
+    {
+      displayName: 'SearchBar Test 7',
       onClick: () => { console.log('clicked6')}
     },
   ]
