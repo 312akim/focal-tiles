@@ -10,7 +10,7 @@ export interface IAppHeader {
 
 const AppHeader: React.FC<IAppHeader> = ({ auth }) => {
   return (
-    <div className={`h-20 bg-gray grid grid-cols-3 text-slate text-center`}>
+    <div className={`min-h-[8vh] bg-gray grid grid-cols-3 text-slate text-center`}>
       <SearchBar searchData={[...mockSearchBarProps.alt.searchData]} />
       <SpacePicker spaces={[...mockSpacePickerProps.base.spaces]} />
 

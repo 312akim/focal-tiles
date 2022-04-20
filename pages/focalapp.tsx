@@ -2,12 +2,11 @@ import React from 'react';
 import AppLayout from '../components/layouts/app/AppLayout';
 import { ReactElement } from 'react';
 import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
+import AppSpace from '../components/surfaces/appSpace/AppSpace';
 
 function FocalApp() {
     return (
-        <div>
-            <h1>FocalApp Page</h1>
-        </div>
+      <AppSpace />
     );
 }
 

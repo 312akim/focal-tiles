@@ -7,11 +7,11 @@ export interface IAppLayout {
 
 const AppLayout: React.FC<IAppLayout> = ({ children }) => {
     return (
-        <>
+        <div className='min-h-screen'>
             <AppHeader auth={true}/>
             <main>{children}</main>
-            <h1>Footer Placeholder</h1>
-        </>
+            <h1 className='min-h-[6vh] bg-gray text-white'>Footer Placeholder</h1>
+        </div>
     );
 }
 
