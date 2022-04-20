@@ -10,11 +10,12 @@ export interface IAppHeader {
 
 const AppHeader: React.FC<IAppHeader> = ({ auth }) => {
   return (
-    <div className={`min-h-[8vh] bg-gray grid grid-cols-3 text-slate text-center`}>
+    <div className={`flex flex-row min-h-[8vh] text-slate bg-gray md:grid md:grid-cols-3 md:text-center`}>
       <SearchBar searchData={[...mockSearchBarProps.alt.searchData]} />
       <SpacePicker spaces={[...mockSpacePickerProps.base.spaces]} />
-
-      <div className='justify-self-end mr-10 rounded-full h-10 w-10 bg-indigo my-auto hover:bg-slate'></div>
+      <div className='w-1/3 my-auto'>
+        <div className='mx-auto md:justify-self-end md:mr-10 rounded-full h-10 w-10 bg-indigo my-auto hover:bg-slate'></div>
+      </div>
     </div>
   )
 };
