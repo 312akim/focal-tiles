@@ -2,11 +2,11 @@
 import { IModal } from './Modal';
 
 const base: IModal = {
-  sampleTextProp: 'Hello world!',
+  children: null
 };
 
 const alt: IModal = {
-  sampleTextProp: 'Hello alt world!',
+  children: null,
 };
 
 export const mockModalProps = {
