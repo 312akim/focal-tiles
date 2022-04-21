@@ -1,14 +1,17 @@
 //import styles from './AppSpace.module.css';
-import { ReactNode } from "react";
+
+import TaskSpace from "../../spaces/taskSpace/TaskSpace";
+import { mockTaskSpaceProps } from "../../spaces/taskSpace/TaskSpace.mocks";
 
 export interface IAppSpace {
-  children: ReactNode
+
 }
 
-const AppSpace: React.FC<IAppSpace> = ({children}) => {
+const AppSpace: React.FC<IAppSpace> = () => {
   return (
     <div className='bg-slate min-h-[86vh] p-4'>
-      {children}
+      {/* Determine Space Type and Data based on STORE */}
+      <TaskSpace data={mockTaskSpaceProps.base.data}/>
     </div>
   );
 };

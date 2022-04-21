@@ -2,11 +2,11 @@
 import { IAppSpace } from './AppSpace';
 
 const base: IAppSpace = {
-  children: null,
+  
 };
 
 const alt: IAppSpace = {
-  children: null,
+  
 };
 
 export const mockAppSpaceProps = {
