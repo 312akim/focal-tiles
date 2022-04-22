@@ -6,7 +6,11 @@ export interface ITileWrapper {
 }
 
 const TileWrapper: React.FC<ITileWrapper> = ({ children }) => {
-  return <div className='w-32 md:w-52 h-32 bg-gray m-2 mt-4 mx-auto'>{children}</div>;
+  return (
+    <div className="w-32 md:w-52 h-32 drop-shadow-xl bg-secondary border-primary-700 hover:border-highlight border-2 m-2 mt-4 mx-auto">
+      {children}
+    </div>
+  );
 };
 
 export default TileWrapper;
