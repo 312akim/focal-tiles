@@ -11,8 +11,8 @@ const SearchBar: React.FC<ISearchBar> = ({ searchData }) => {
   const [userSearch, setUserSearch] = useState('');
 
   return (
-    <div className="flex w-1/2 md:w-1/3 justify-start md:ml-10">
-      <label htmlFor="headerSearchInput" className="my-auto ml-5 pr-2 md:pr-4">
+    <div className="flex w-1/2 md:w-1/3 justify-start md:ml-24">
+      <label htmlFor="headerSearchInput" className="my-auto ml-5 md:ml-0 pr-2 md:pr-4">
         <FontAwesomeIcon
           icon={faMagnifyingGlass}
           className="hover:cursor-pointer"
