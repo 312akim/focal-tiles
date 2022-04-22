@@ -5,7 +5,7 @@ describe('AppHeader', () => {
   it('renders text', () => {
     render(<AppHeader auth={true} />);
 
-    const text = screen.getByText(/Space Picker/i);
+    const text = screen.getByText(/Space/i);
 
     expect(text).toBeInTheDocument();
   });

@@ -16,7 +16,7 @@ const Home: NextPageWithLayout = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="http://focaltiles.com/">FocalTiles!</a>
+          Welcome to <a className={'hover:decoration-primary-400 hover:underline focus:decoration-primary-400 focus:underline active:decoration-primary-400 active:underline'} href="http://focaltiles.com/focalapp"><span className={'text-primary-400'}>FocalTiles!</span></a>
         </h1>
         <Link href={'/focalapp'}>
           <a>

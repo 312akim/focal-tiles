@@ -7,9 +7,13 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'gray': '#1f2937',
-      'slate': '#cbd5e1',
-      'indigo': '#4f46e5',
+      'primary': {
+        100: '#d1fae5',
+        400: '#34d399',
+        700: '#047857',
+      },
+      'secondary': '#FAFAFA',
+      'highlight': '#4f46e5',
       'black': colors.black,
       'white': colors.white,
     },
