@@ -33,10 +33,9 @@ const TaskSpace: React.FC<ITaskSpace> = ({data}) => {
 
 const TaskTile = ({title, status, notes, dueDate, timer}: ITaskTile) => {
   return (
-    <div className=''>
+    <div className='flex flex-col justify-between text-center bg-primary-100 h-full p-2'>
       <div>{title}</div>
       <div>{status}</div>
-      <div>{notes}</div>
       <div>{dueDate}</div>
       <div>{timer}</div>
     </div>
