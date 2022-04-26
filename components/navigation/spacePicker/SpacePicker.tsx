@@ -19,9 +19,9 @@ const SpacePicker: React.FC<ISpacePicker> = ({ spaces }) => {
         </div>
         <div>
           {
-            hidden ? <div /> : 
+            hidden ? <div/> : 
             <Modal>
-              <FontAwesomeIcon icon={faRectangleXmark} className='self-end' size='2xl' onClick={() => setHidden(true)} />
+              <FontAwesomeIcon icon={faRectangleXmark} className='self-end' size='2x' onClick={() => setHidden(true)} />
               <div className='mt-20 text-center'>Inside Modal Placeholder</div>
             </Modal>
           }
