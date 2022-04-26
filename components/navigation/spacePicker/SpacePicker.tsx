@@ -1,6 +1,6 @@
 //import styles from './SpacePicker.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown, faRectangleXmark } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import Modal from '../../utils/modal/Modal';
 
@@ -19,10 +19,10 @@ const SpacePicker: React.FC<ISpacePicker> = ({ spaces }) => {
         </div>
         <div>
           {
-            hidden ? <div></div> : 
+            hidden ? <div /> : 
             <Modal>
-              <button className="w-full bg-primary" onClick={() => setHidden(true)}>Close</button>
-              <div>Inside Modal Placeholder</div>
+              <FontAwesomeIcon icon={faRectangleXmark} className='self-end' size='2xl' onClick={() => setHidden(true)} />
+              <div className='mt-20 text-center'>Inside Modal Placeholder</div>
             </Modal>
           }
         </div>
