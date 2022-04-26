@@ -15,8 +15,8 @@ const AppHeader: React.FC<IAppHeader> = ({ auth }) => {
     >
       <SearchBar searchData={[...mockSearchBarProps.alt.searchData]} />
       <SpacePicker spaces={[...mockSpacePickerProps.base.spaces]} />
-      <div className="w-1/3 my-auto">
-        <div className="mx-auto md:justify-self-end md:mr-10 rounded-full h-10 w-10 bg-highlight my-auto hover:bg-secondary"></div>
+      <div className="w-[20%] md:w-1/3 m-auto md:mr-24">
+        <div className="mr-5 md:mr-0 rounded-full h-10 w-10 bg-highlight m-auto hover:bg-secondary"></div>
       </div>
     </div>
   );

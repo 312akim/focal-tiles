@@ -7,13 +7,13 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'primary': {
+      'primary': { // Green
         100: '#d1fae5',
         400: '#34d399',
         700: '#047857',
       },
-      'secondary': '#FAFAFA',
-      'highlight': '#4f46e5',
+      'secondary': '#FAFAFA', // Gray
+      'highlight': '#4f46e5', // Purple
       'black': colors.black,
       'white': colors.white,
     },
