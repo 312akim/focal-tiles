@@ -26,7 +26,7 @@ const SpacePicker: React.FC<ISpacePicker> = ({ spaces }) => {
             </Modal>
           }
         </div>
-      </div>
+    </div>
   );
 };
 

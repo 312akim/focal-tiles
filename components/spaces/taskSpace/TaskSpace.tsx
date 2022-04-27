@@ -1,4 +1,7 @@
 //import styles from './TaskSpace.module.css';
+import { faToolbox } from '@fortawesome/free-solid-svg-icons';
+import { faStopwatch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import TileWrapper from '../../tiles/tileWrapper/TileWrapper';
 
 
@@ -11,7 +14,7 @@ interface ITaskTile {
   status: string;
   notes: string;
   dueDate: string;
-  timer: number;
+  timer: string; // number of seconds
 }
 
 const TaskSpace: React.FC<ITaskSpace> = ({data}) => {
@@ -33,11 +36,17 @@ const TaskSpace: React.FC<ITaskSpace> = ({data}) => {
 
 const TaskTile = ({title, status, notes, dueDate, timer}: ITaskTile) => {
   return (
-    <div className='flex flex-col justify-between text-center bg-primary-100 h-full p-2'>
-      <div>{title}</div>
-      <div>{status}</div>
-      <div>{dueDate}</div>
-      <div>{timer}</div>
+    <div className='flex flex-col text-center bg-primary-100 h-full p-0 justify-between py-4 text-lg'>
+      <div className='text-xl '>{title}</div>
+      <div className=''>{dueDate}</div>
+      <div className='flex flex-row mx-2 w-auto pl-1'>
+        <FontAwesomeIcon icon={faToolbox} size='lg' className='my-auto w-5'/>
+        <div className='mx-auto pr-1'>{status}</div>
+      </div>
+      <div className='flex flex-row mx-2 w-auto pl-1'>
+        <FontAwesomeIcon icon={faStopwatch} size='lg' className='my-auto w-5'/>
+        <div className='mx-auto pr-1'>{timer}</div>
+      </div>
     </div>
   )
 }
