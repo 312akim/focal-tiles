@@ -3,6 +3,7 @@ import { faToolbox } from '@fortawesome/free-solid-svg-icons';
 import { faStopwatch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import TileWrapper from '../../tiles/tileWrapper/TileWrapper';
+import { secondsToTime } from '../../../lib/secondsToTime';
 
 
 export interface ITaskSpace {
@@ -14,7 +15,7 @@ interface ITaskTile {
   status: string;
   notes: string;
   dueDate: string;
-  timer: string; // number of seconds
+  timer: number; // number of seconds
 }
 
 const TaskSpace: React.FC<ITaskSpace> = ({data}) => {
@@ -45,7 +46,7 @@ const TaskTile = ({title, status, notes, dueDate, timer}: ITaskTile) => {
       </div>
       <div className='flex flex-row mx-2 w-auto pl-1'>
         <FontAwesomeIcon icon={faStopwatch} size='lg' className='my-auto w-5'/>
-        <div className='mx-auto pr-1'>{timer}</div>
+        <div className='mx-auto pr-1'>{secondsToTime(timer)}</div>
       </div>
     </div>
   )
