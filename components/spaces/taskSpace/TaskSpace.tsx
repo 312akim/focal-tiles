@@ -6,6 +6,7 @@ import TileWrapper from '../../tiles/tileWrapper/TileWrapper';
 import { secondsToTime } from '../../../lib/secondsToTime';
 import { ReactNode } from 'react';
 import { Icon } from '@fortawesome/fontawesome-svg-core';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 
 export interface ITaskSpace {
@@ -54,15 +55,15 @@ const TaskTile = ({title, status, notes, dueDate, timer}: ITaskTile) => {
 
 interface ITaskButtonContainer {
   children: ReactNode;
-  icon: Icon
+  icon: IconProp
 }
 
-const TaskButtonContainer: ITaskButtonContainer = ({children, icon}) => {
-  return(
+const TaskButtonContainer: React.FC<ITaskButtonContainer> = ({children, icon}) => {
+  return (
     <div className='flex flex-row mx-2 w-auto pl-1 border-secondary border-2 shadow-md hover:border-primary-400 hover:cursor-pointer'>
       <FontAwesomeIcon icon={icon} size='lg' className='my-auto w-5'/>
       {children}
-  </div>
+    </div>
   )
 }
 
