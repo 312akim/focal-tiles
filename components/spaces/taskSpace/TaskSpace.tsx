@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import TileWrapper from '../../tiles/tileWrapper/TileWrapper';
 import { secondsToTime } from '../../../lib/secondsToTime';
 import { ReactNode } from 'react';
-import { Icon } from '@fortawesome/fontawesome-svg-core';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 
@@ -15,7 +14,7 @@ export interface ITaskSpace {
 
 const TaskSpace: React.FC<ITaskSpace> = ({data}) => {
   return (
-    <div className='grid grid-cols-2 lg:grid-cols-4'>
+    <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4'>
       {data.map((tile: ITaskTile) => 
         <TileWrapper key={tile.title}>
           <TaskTile 
