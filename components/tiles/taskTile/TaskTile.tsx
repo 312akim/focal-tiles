@@ -53,7 +53,7 @@ const TaskTile = ({title, status, notes, dueDate, timer}: ITaskTile) => {
 interface IStatusMenu {
   showStatus: boolean;
   status: string;
-  clickHandler: () => void;
+  clickHandler: (item: string) => void;
   menuItems: Array<string>;
 }
 
