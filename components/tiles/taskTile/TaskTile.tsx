@@ -63,8 +63,8 @@ export const StatusMenu = ({showStatus, status, clickHandler, menuItems}) => {
 interface ITaskButtonContainer {
   children: ReactNode;
   icon: IconProp;
-  clickHandler: () => void;
-  className: string;
+  clickHandler?: () => void;
+  className?: string;
 }
 
 const TaskButtonContainer: React.FC<ITaskButtonContainer> = ({children, icon, clickHandler, className}) => {
