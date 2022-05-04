@@ -63,7 +63,7 @@ export const StatusMenu = ({showStatus, status, clickHandler, menuItems}) => {
 interface ITaskButtonContainer {
   children: ReactNode;
   icon: IconProp;
-  onClick: () => void;
+  clickHandler: () => void;
   className: string;
 }
 
