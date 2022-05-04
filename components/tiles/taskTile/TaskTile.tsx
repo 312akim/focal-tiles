@@ -57,7 +57,7 @@ interface IStatusMenu {
   menuItems: Array<string>;
 }
 
-export const StatusMenu: IStatusMenu = ({showStatus, status, clickHandler, menuItems}) => {
+export const StatusMenu: React.FC<IStatusMenu> = ({showStatus, status, clickHandler, menuItems}) => {
   return (
     <div className={`${showStatus ? '' : 'hidden'} fixed w-[92%] left-[4%] right-[4%] py-2 top-[0%] h-[100%] bg-primary-700 rounded-md flex flex-col justify-around`}>
       {menuItems.map((item, index) => {
