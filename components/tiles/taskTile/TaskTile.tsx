@@ -19,7 +19,7 @@ export interface ITaskTile {
 const TaskTile = ({title, status, notes, dueDate, timer}: ITaskTile) => {
   const [showStatus, setShowStatus] = useState(false)
   
-  const handleStatusClick = (item) => {
+  const handleStatusClick = (item: string): void => {
     setShowStatus(prev => !prev);
     console.log(item)
     if (item !== status) {
@@ -27,7 +27,7 @@ const TaskTile = ({title, status, notes, dueDate, timer}: ITaskTile) => {
     }
   }
 
-  const handleTimerClick = () => {
+  const handleTimerClick = (): void => {
     console.log('clicked')
   }
 
