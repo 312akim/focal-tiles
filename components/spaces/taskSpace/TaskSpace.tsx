@@ -18,6 +18,7 @@ const TaskSpace: React.FC<ITaskSpace> = ({data}) => {
             notes={tile.notes}
             dueDate={tile.dueDate}
             timer={tile.timer}
+            id={tile.id}
           />
         </TileWrapper>)}
     </div>
