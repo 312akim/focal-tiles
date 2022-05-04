@@ -37,7 +37,7 @@ const TaskTile = ({title, status, notes, dueDate, timer}: ITaskTile) => {
     <div className='flex flex-col text-center bg-primary-100 h-full p-0 justify-between py-4 text-lg'>
       <div className='text-xl '>{title}</div>
       <div className=''>{dueDate}</div>
-      <TaskButtonContainer icon={faToolbox} className='flex flex-col' clickHandler={() => setShowStatus((prev) => !prev)}>
+      <TaskButtonContainer icon={faToolbox} clickHandler={() => setShowStatus((prev) => !prev)}>
         <button className='mx-auto pr-1'>{status}</button>
       </TaskButtonContainer>
       
@@ -50,7 +50,14 @@ const TaskTile = ({title, status, notes, dueDate, timer}: ITaskTile) => {
   )
 }
 
-export const StatusMenu = ({showStatus, status, clickHandler, menuItems}) => {
+interface IStatusMenu {
+  showStatus: boolean;
+  status: string;
+  clickHandler: () => void;
+  menuItems: Array<string>;
+}
+
+export const StatusMenu: IStatusMenu = ({showStatus, status, clickHandler, menuItems}) => {
   return (
     <div className={`${showStatus ? '' : 'hidden'} fixed w-[92%] left-[4%] right-[4%] py-2 top-[0%] h-[100%] bg-primary-700 rounded-md flex flex-col justify-around`}>
       {menuItems.map((item, index) => {
