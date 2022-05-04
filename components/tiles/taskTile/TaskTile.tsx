@@ -64,11 +64,12 @@ interface ITaskButtonContainer {
   children: ReactNode;
   icon: IconProp;
   onClick: () => void;
+  className: string;
 }
 
-const TaskButtonContainer: React.FC<ITaskButtonContainer> = ({children, icon, clickHandler}) => {
+const TaskButtonContainer: React.FC<ITaskButtonContainer> = ({children, icon, clickHandler, className}) => {
   return (
-    <div className='flex flex-row mx-2 w-auto pl-1 border-secondary border-2 shadow-md hover:border-primary-400 hover:cursor-pointer' onClick={clickHandler}>
+    <div className={`${className} flex flex-row mx-2 w-auto pl-1 border-secondary border-2 shadow-md hover:border-primary-400 hover:cursor-pointer`} onClick={clickHandler}>
       <FontAwesomeIcon icon={icon} size='lg' className='my-auto w-5'/>
       {children}
     </div>
