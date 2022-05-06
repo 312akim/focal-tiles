@@ -3,6 +3,8 @@ import AppLayout from '../components/layouts/app/AppLayout';
 import { ReactElement } from 'react';
 import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
 import AppSpace from '../components/surfaces/appSpace/AppSpace';
+import { Provider } from 'react-redux';
+import { store } from '../app/store';
 
 function FocalApp() {
     return (
@@ -12,11 +14,13 @@ function FocalApp() {
 
 FocalApp.getLayout = function getLayout(page: ReactElement) {
     return (
-      <PrimaryLayout>
-        <AppLayout>
-          {page}
-        </AppLayout>
-      </PrimaryLayout>
+      <Provider store={store}>
+        <PrimaryLayout>
+          <AppLayout>
+            {page}
+          </AppLayout>
+        </PrimaryLayout>
+      </Provider>
     )
   }
 
