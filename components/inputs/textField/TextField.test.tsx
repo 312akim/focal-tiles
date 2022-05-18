@@ -5,14 +5,14 @@ import TextField from './TextField';
 describe('TextField', () => {
   const setup = () => {
     const Parent = () => {
-      const [value, setValue] = useState();
+      const [value, setValue] = useState('');
       return (
         <TextField id={'nickname'} label={'Nickname'} value={value} setValue={setValue}/>
       )
     };
 
     const utils = render(<Parent />);
-    const input = utils.getByTestId('nickname');
+    const input = utils.getByTestId('nickname') as HTMLInputElement;
 
     return {input, ...utils}
   }

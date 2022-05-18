@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { Dispatch, useState } from 'react';
 import styles from './TextField.module.css';
 
 export interface ITextField {
   label: string;
   id: string;
   value: string;
-  setValue: () => void;
+  setValue: (str: string) => void;
 }
 
 const TextField: React.FC<ITextField> = ({ id, label, value, setValue }) => {
@@ -14,8 +14,8 @@ const TextField: React.FC<ITextField> = ({ id, label, value, setValue }) => {
   return (
     <div className='w-auto sm:max-w-[320px] md:max-w-[480px] h-[42px] my-3'>
       <label htmlFor={id} className={
-        `absolute pl-3 hover:cursor-text px-[6px] transition-transform opacity-80 whitespace-nowrap flex items-center h-[42px]
-        ${focused || value !== '' ? 'h-[20px] -translate-y-3 translate-x-3 text-sm bg-white opacity-400' : ''}`}
+        `absolute select-none pl-3 hover:cursor-text px-[6px] transition-transform opacity-80 whitespace-nowrap flex items-center h-[42px]
+        ${focused || value !== '' ? 'h-[20px] -translate-y-3 translate-x-3 text-sm bg-white opacity-100 rounded-lg' : ''}`}
       >
         {label}
       </label>

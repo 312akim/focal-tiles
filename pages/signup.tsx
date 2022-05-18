@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { FormEvent, useState } from 'react';
 import UserPool from '../UserPool'
 import { CognitoUserAttribute, CognitoUser } from 'amazon-cognito-identity-js';
 import Modal from '../components/utils/modal/Modal';
 import TextField from '../components/inputs/textField/TextField';
+import { NextPage } from 'next';
 
-function Signup(props) {
+const Signup = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
@@ -13,10 +14,9 @@ function Signup(props) {
     const [signupError, setSignupError] = useState("");
     const [modal, setModal] = useState(true);
 
-    const onSignupSubmit = async (e) => {
-        e.preventDefault();
+    const onSignupSubmit = async (event: React.SyntheticEvent) => {
+        event.preventDefault();
         try {
-
             setSignupError("");
             
             const attributeList = []
@@ -37,7 +37,7 @@ function Signup(props) {
         attributeList.push(attributePhoneNumber)
         attributeList.push(attributeNickname)
 
-        UserPool.signUp(email, password, attributeList, null, (err, result) => {
+        UserPool.signUp(email, password, attributeList, [], (err, result) => {
             if (err) {
                 //set error
                 setSignupError(err.message)
@@ -53,8 +53,8 @@ function Signup(props) {
         }
     }
 
-    const onSignupCodeSubmit = (e) => {
-        e.preventDefault();
+    const onSignupCodeSubmit = (event: React.SyntheticEvent) => {
+        event.preventDefault();
 
         const userData = {
             Username: email,
@@ -86,14 +86,7 @@ function Signup(props) {
             <Modal>
                 <form onSubmit={onSignupCodeSubmit}>
                     <h2 className='text-xl'>Code has been sent to your email!</h2>
-                    <label htmlFor='verifyCode' className="flex flex-col">
-                        Verification Code
-                    </label>
-                    <input
-                        id='verifyCode'
-                        value={verifyCode}
-                        onChange={e => setVerifyCode(e.target.value)}
-                    />
+                    <TextField id='verifyCode' label='Verification Code' value={verifyCode} setValue={setVerifyCode} />
                     <button type='submit'>Submit</button>
                 </form>
             </Modal>

@@ -11,7 +11,8 @@
     "prepare": "husky install",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "typescript": "tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
