@@ -2,11 +2,11 @@
 import { IButton } from './Button';
 
 const base: IButton = {
-  text: 'Go to App',
+  onClick: () => console.log('clicked'),
 };
 
 const alt: IButton = {
-  text: 'Submit',
+  onClick: () => console.log('clicked')
 };
 
 export const mockButtonProps = {

@@ -20,7 +20,7 @@ const Home: NextPageWithLayout = () => {
         </h1>
         <Link href={'/focalapp'}>
           <a>
-            <Button text={'Go to App'}/>
+            <Button className='mt-12'>Go to App</Button>
           </a>
         </Link>
       </main>

@@ -41,11 +41,11 @@ const SpacePicker: React.FC<ISpacePicker> = () => {
           size="lg"
         />
       </div>
-      <div>
+      <div className='flex justify-center'>
         {hidden ? (
           <div />
         ) : (
-          <Modal>
+          <Modal className='border-2 border-primary-400 h-auto w-96'>
             <div className="flex flex-row justify-between">
               <h2 className="text-lg">{selectedDisplayName}</h2>
               <FontAwesomeIcon
@@ -55,7 +55,7 @@ const SpacePicker: React.FC<ISpacePicker> = () => {
                 onClick={() => setHidden(true)}
               />
             </div>
-            <div className="mt-20 text-center">
+            <div className="mt-20 text-center flex flex-col gap-3">
               {spaces.map((space) => {
                 return (
                   <Space
