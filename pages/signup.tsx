@@ -4,6 +4,7 @@ import { CognitoUserAttribute, CognitoUser } from 'amazon-cognito-identity-js';
 import Modal from '../components/utils/modal/Modal';
 import TextField from '../components/inputs/textField/TextField';
 import Button from '../components/inputs/button/Button';
+import { useRouter } from 'next/router';
 
 const Signup = () => {
     const [email, setEmail] = useState("");
@@ -14,6 +15,8 @@ const Signup = () => {
     const [verifyCode, setVerifyCode] = useState("");
     const [codeError, setCodeError] = useState("");
     const [modal, setModal] = useState(false);
+
+    const router = useRouter();
 
     const onSignupSubmit = async (event: React.SyntheticEvent) => {
         event.preventDefault();
@@ -75,7 +78,8 @@ const Signup = () => {
                     return setCodeError(err.message || JSON.stringify(err));
                 }
                 if (result) {
-                    return setModal(false)
+                    setModal(false);
+                    router.push('/focalapp');
                 }
             })
         } catch (err) {
