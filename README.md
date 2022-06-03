@@ -38,6 +38,10 @@ Tiles makeup Spaces and provide specific functionality based on the Space it is 
 - 1 click copy passwords.
 - 1 click open page to website on new tab.
 
+#### Track Job Applications
+- Set status/stage for applications (Submitted, Received, Denied, Interview, Code Test)
+- Organize notes, links, and keywords
+
 # Development Tools Overview
 
 ## Client
