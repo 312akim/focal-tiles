@@ -2,10 +2,9 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import type { RootState } from './store';
 
 export type AppState = {
-  auth: boolean;
   currentSpace: number;
   spaces: Array<ISpace>;
-  nickname: string;
+  title: string;
 };
 
 export interface ISpace {
@@ -33,10 +32,9 @@ const mockSpaces = [
 ]
 
 const initialState: AppState = {
-  auth: true,
   currentSpace: 0,
   spaces: mockSpaces,
-  nickname: 'Focal Demo',
+  title: 'Focal Demo',
 };
 
 export const appSlice = createSlice({
@@ -57,9 +55,8 @@ export const appSlice = createSlice({
 
 export const { createSpace, deleteSpace, switchSpace } = appSlice.actions;
 
-export const selectAppSpaces = (state: RootState) => state.app.spaces;
-export const selectAppNickname = (state: RootState) => state.app.nickname;
 export const selectAppCurrentSpace = (state: RootState) => state.app.currentSpace;
-export const selectAppAuth = (state: RootState) => state.app.auth;
+export const selectAppSpaces = (state: RootState) => state.app.spaces;
+export const selectAppTitle = (state: RootState) => state.app.title;
 
 export default appSlice.reducer;
