@@ -6,8 +6,11 @@ import { secondsToTime } from '../../../lib/secondsToTime';
 import { ReactNode } from 'react';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { updateTileStatus } from '../../../app/appSlice';
 
 export interface ITaskTile {
+  index: number;
   title: string;
   status: string;
   notes: string;
@@ -16,14 +19,14 @@ export interface ITaskTile {
   id: number;
 }
 
-const TaskTile = ({title, status, notes, dueDate, timer}: ITaskTile) => {
+const TaskTile = ({index, title, status, notes, dueDate, timer}: ITaskTile) => {
   const [showStatus, setShowStatus] = useState(false)
+  const dispatch = useDispatch();
   
   const handleStatusClick = (item: string): void => {
     setShowStatus(prev => !prev);
-    console.log(item)
     if (item !== status) {
-      // Dispatch status to equal clicked item
+      dispatch(updateTileStatus({index: index, status: item}));
     }
   }
 

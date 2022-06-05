@@ -10,9 +10,10 @@ export interface ITaskSpace {
 const TaskSpace: React.FC<ITaskSpace> = ({data}) => {
   return (
     <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4'>
-      {data.map((tile) => 
+      {data.map((tile, index) => 
         <TileWrapper key={tile.id}>
-          <TaskTile 
+          <TaskTile
+            index={index}
             title={tile.title}
             status={tile.status}
             notes={tile.notes}

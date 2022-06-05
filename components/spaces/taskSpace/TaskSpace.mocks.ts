@@ -9,7 +9,8 @@ const base: ITaskSpace = {
       notes: 'Note 1',
       dueDate: '05/11/22',
       timer: 6625,
-      id: 1
+      id: 1,
+      index: 0,
     },
     {
       title: 'Title 2',
@@ -17,7 +18,8 @@ const base: ITaskSpace = {
       notes: 'Note 2',
       dueDate: '05/22/22',
       timer: 6625,
-      id: 2
+      id: 2,
+      index: 1,
     },
     {
       title: 'Title 3',
@@ -25,7 +27,8 @@ const base: ITaskSpace = {
       notes: 'Note 3',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 3
+      id: 3,
+      index: 2,
     },
     {
       title: 'Title 4',
@@ -33,7 +36,8 @@ const base: ITaskSpace = {
       notes: 'Note 4',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 4
+      id: 4,
+      index: 3,
     },
     {
       title: 'Title 5',
@@ -41,7 +45,8 @@ const base: ITaskSpace = {
       notes: 'Note 5',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 5
+      id: 5,
+      index: 4,
     },
     {
       title: 'Title 6',
@@ -49,7 +54,8 @@ const base: ITaskSpace = {
       notes: 'Note 6',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 6
+      id: 6,
+      index: 5,
     },
     {
       title: 'Title 7',
@@ -57,7 +63,8 @@ const base: ITaskSpace = {
       notes: 'Note 7',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 7
+      id: 7,
+      index: 6,
     },
     {
       title: 'Title 8',
@@ -65,7 +72,8 @@ const base: ITaskSpace = {
       notes: 'Note 8',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 8
+      id: 8,
+      index: 7,
     },
     {
       title: 'Title 9',
@@ -73,7 +81,8 @@ const base: ITaskSpace = {
       notes: 'Note 9',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 9
+      id: 9,
+      index: 8,
     },
     {
       title: 'Title 10',
@@ -81,7 +90,8 @@ const base: ITaskSpace = {
       notes: 'Note 10',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 10
+      id: 10,
+      index: 9,
     },
     {
       title: 'Title 11',
@@ -89,7 +99,8 @@ const base: ITaskSpace = {
       notes: 'Note 11',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 11
+      id: 11,
+      index: 10,
     },
     {
       title: 'Title 12',
@@ -97,7 +108,8 @@ const base: ITaskSpace = {
       notes: 'Note 12',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 12
+      id: 12,
+      index: 11,
     },
     {
       title: 'Title 13',
@@ -105,7 +117,8 @@ const base: ITaskSpace = {
       notes: 'Note 13',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 13
+      id: 13,
+      index: 12,
     },
     {
       title: 'Title 14',
@@ -113,7 +126,8 @@ const base: ITaskSpace = {
       notes: 'Note 14',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 14
+      id: 14,
+      index: 13,
     },
     {
       title: 'Title 15',
@@ -121,7 +135,8 @@ const base: ITaskSpace = {
       notes: 'Note 15',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 15
+      id: 15,
+      index: 14,
     },
     {
       title: 'Title 16',
@@ -129,7 +144,8 @@ const base: ITaskSpace = {
       notes: 'Note 16',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 16
+      id: 16,
+      index: 15,
     },
     {
       title: 'Title 17',
@@ -137,7 +153,8 @@ const base: ITaskSpace = {
       notes: 'Note 17',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 17
+      id: 17,
+      index: 16,
     },
     {
       title: 'Title 18',
@@ -145,7 +162,8 @@ const base: ITaskSpace = {
       notes: 'Note 18',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 18
+      id: 18,
+      index: 17,
     },
     {
       title: 'Title 19',
@@ -153,7 +171,8 @@ const base: ITaskSpace = {
       notes: 'Note 19',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 19
+      id: 19,
+      index: 18,
     },
     {
       title: 'Title 20',
@@ -161,7 +180,8 @@ const base: ITaskSpace = {
       notes: 'Note 20',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 20
+      id: 20,
+      index: 19,
     },
   ],
 };
@@ -174,7 +194,8 @@ const alt: ITaskSpace = {
       notes: 'Note 1',
       dueDate: '05/11/22',
       timer: 6625,
-      id: 1
+      id: 1,
+      index: 0,
     },
     {
       title: 'Title 2',
@@ -182,7 +203,8 @@ const alt: ITaskSpace = {
       notes: 'Note 2',
       dueDate: '05/22/22',
       timer: 6625,
-      id: 2
+      id: 2,
+      index: 1,
     },
     {
       title: 'Title 3',
@@ -190,7 +212,8 @@ const alt: ITaskSpace = {
       notes: 'Note 3',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 3
+      id: 3,
+      index: 2,
     },
     {
       title: 'Title 4',
@@ -198,7 +221,8 @@ const alt: ITaskSpace = {
       notes: 'Note 4',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 4
+      id: 4,
+      index: 3,
     },
     {
       title: 'Title 5',
@@ -206,7 +230,8 @@ const alt: ITaskSpace = {
       notes: 'Note 5',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 5
+      id: 5,
+      index: 4,
     },
     {
       title: 'Title 6',
@@ -214,7 +239,8 @@ const alt: ITaskSpace = {
       notes: 'Note 6',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 6
+      id: 6,
+      index: 5,
     },
     {
       title: 'Title 7',
@@ -222,7 +248,8 @@ const alt: ITaskSpace = {
       notes: 'Note 7',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 7
+      id: 7,
+      index: 6,
     },
     {
       title: 'Title 8',
@@ -230,7 +257,8 @@ const alt: ITaskSpace = {
       notes: 'Note 8',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 8
+      id: 8,
+      index: 7,
     },
     {
       title: 'Title 9',
@@ -238,7 +266,8 @@ const alt: ITaskSpace = {
       notes: 'Note 9',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 9
+      id: 9,
+      index: 8,
     },
     {
       title: 'Title 10',
@@ -246,7 +275,8 @@ const alt: ITaskSpace = {
       notes: 'Note 10',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 10
+      id: 10,
+      index: 9,
     },
     {
       title: 'Title 11',
@@ -254,7 +284,8 @@ const alt: ITaskSpace = {
       notes: 'Note 11',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 11
+      id: 11,
+      index: 10,
     },
     {
       title: 'Title 12',
@@ -262,7 +293,8 @@ const alt: ITaskSpace = {
       notes: 'Note 12',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 12
+      id: 12,
+      index: 11,
     },
     {
       title: 'Title 13',
@@ -270,7 +302,8 @@ const alt: ITaskSpace = {
       notes: 'Note 13',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 13
+      id: 13,
+      index: 12,
     },
     {
       title: 'Title 14',
@@ -278,7 +311,8 @@ const alt: ITaskSpace = {
       notes: 'Note 14',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 14
+      id: 14,
+      index: 13,
     },
     {
       title: 'Title 15',
@@ -286,7 +320,8 @@ const alt: ITaskSpace = {
       notes: 'Note 15',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 15
+      id: 15,
+      index: 14,
     },
     {
       title: 'Title 16',
@@ -294,7 +329,8 @@ const alt: ITaskSpace = {
       notes: 'Note 16',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 16
+      id: 16,
+      index: 15,
     },
     {
       title: 'Title 17',
@@ -302,7 +338,8 @@ const alt: ITaskSpace = {
       notes: 'Note 17',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 17
+      id: 17,
+      index: 16,
     },
     {
       title: 'Title 18',
@@ -310,7 +347,8 @@ const alt: ITaskSpace = {
       notes: 'Note 18',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 18
+      id: 18,
+      index: 17,
     },
     {
       title: 'Title 19',
@@ -318,7 +356,8 @@ const alt: ITaskSpace = {
       notes: 'Note 19',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 19
+      id: 19,
+      index: 18,
     },
     {
       title: 'Title 20',
@@ -326,7 +365,8 @@ const alt: ITaskSpace = {
       notes: 'Note 20',
       dueDate: '06/03/22',
       timer: 6625,
-      id: 20
+      id: 20,
+      index: 19,
     },
   ],
 };

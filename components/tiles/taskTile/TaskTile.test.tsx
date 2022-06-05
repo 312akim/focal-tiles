@@ -1,10 +1,16 @@
 import { render, screen } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import { store } from '../../../app/store';
 import { secondsToTime } from '../../../lib/secondsToTime';
 import TaskTile, { StatusMenu } from './TaskTile';
 
 describe('TaskTile', () => {
   it('renders a title, a due date, and 2 buttons', () => {
-    render(<TaskTile title={"Debug Price Estimate"} id={1} status={"Ongoing"} notes={"None"} dueDate={"12/12/23"} timer={6255} />);
+    render(
+      <Provider store={store}>
+        <TaskTile index={0} title={"Debug Price Estimate"} id={1} status={"Ongoing"} notes={"None"} dueDate={"12/12/23"} timer={6255} />
+      </Provider>
+    );
     const convertedTime = secondsToTime(6255);
 
     const titleText = screen.getByText(/Debug Price Estimate/);

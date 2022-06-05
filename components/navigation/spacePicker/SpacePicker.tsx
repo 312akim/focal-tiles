@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   ISpace,
-  selectAppCurrentSpace,
+  selectAppSelectedSpaceIndex,
   selectAppSpaces,
   switchSpace,
 } from '../../../app/appSlice';
@@ -21,7 +21,7 @@ export interface ISpacePicker {
 const SpacePicker: React.FC<ISpacePicker> = () => {
   const [hidden, setHidden] = useState(true);
   const spaces = useSelector(selectAppSpaces);
-  const selectedSpace = useSelector(selectAppCurrentSpace);
+  const selectedSpace = useSelector(selectAppSelectedSpaceIndex);
   const selectedDisplayName =
     selectedSpace === 0
       ? 'Space'
@@ -59,9 +59,10 @@ const SpacePicker: React.FC<ISpacePicker> = () => {
               {spaces.map((space) => {
                 return (
                   <Space
-                    displayName={space.displayName}
                     key={space.id}
+                    displayName={space.displayName}
                     id={space.id}
+                    tiles={space.tiles}
                   />
                 );
               })}

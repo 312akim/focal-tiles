@@ -8,6 +8,7 @@ const base: ITaskTile = {
   dueDate: "06/03/22",
   timer: 5432,
   id: 1,
+  index: 0,
 };
 
 const alt: ITaskTile = {
@@ -17,6 +18,7 @@ const alt: ITaskTile = {
   dueDate: "04/05/22",
   timer: 7654,
   id: 2,
+  index: 1,
 };
 
 export const mockTaskTileProps = {
